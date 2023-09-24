@@ -59,4 +59,8 @@ return {
       require("neoscroll").setup()
     end,
   },
+  {
+    "xiyaowong/transparent.nvim",
+    lazy = false,
+  },
 }
