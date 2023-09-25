@@ -13,10 +13,14 @@ return {
     },
     config = function()
       require("telescope").setup({
+        defaults = {
+          path_display = { "truncate" },
+        },
         extensions = {
           undo = {},
         },
       })
+
       require("telescope").load_extension("undo")
       vim.keymap.set("n", "<leader>uu", "<cmd>Telescope undo<cr>")
     end,
