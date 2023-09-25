@@ -22,6 +22,13 @@ return {
     end,
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    dependencies = { "windwp/nvim-ts-autotag" },
+    opts = {
+      autotag = { enable = true },
+    },
+  },
+  {
     "echasnovski/mini.comment",
     event = "VeryLazy",
     opts = {
