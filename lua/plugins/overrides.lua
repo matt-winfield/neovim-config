@@ -26,6 +26,9 @@ return {
     end,
   },
   {
+    "OmniSharp/omnisharp-vim",
+  },
+  {
     "telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",

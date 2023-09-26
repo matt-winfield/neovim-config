@@ -9,3 +9,24 @@ local function map(mode, lhs, rhs, opts)
   end
   vim.keymap.set(mode, lhs, rhs, options)
 end
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "cs",
+  group = vim.api.nvim_create_augroup("cs_only_keymap", { clear = true }),
+  callback = function()
+    map("n", "<leader>osgd", "<cmd>OmniSharpGotoDefinition<cr>", { desc = "OmniSharp Go To Definition" })
+    map("n", "<leader>osfu", "<cmd>OmniSharpFindUsages<cr>", { desc = "OmniSharp Find Usages" })
+    map({ "n", "x" }, "<leader>osca", "<cmd>OmniSharpGetCodeActions<cr>", { desc = "OmniSharp Code Actions" })
+    map("n", "<leader>osfi", "<cmd>OmniSharpFindImplementations<cr>", { desc = "OmniSharp Find Implementations" })
+    map("n", "<leader>ospd", "<cmd>OmniSharpPreviewDefinition<cr>", { desc = "OmniSharp Preview Definition" })
+    map("n", "<leader>ospi", "<cmd>OmniSharpPreviewImplementations<cr>", { desc = "OmniSharp Preview Implementations" })
+    map("n", "<leader>ost", "<cmd>OmniSharpTypeLookup<cr>", { desc = "OmniSharp Type Lookup" })
+    map("n", "<leader>osd", "<cmd>OmniSharpDocumentation<cr>", { desc = "OmniSharp Documentation" })
+    map("n", "<leader>osfs", "<cmd>OmniSharpFindSymbol<cr>", { desc = "OmniSharp Find Symbol" })
+    map("n", "<leader>osfx", "<cmd>OmniSharpFixUsings<cr>", { desc = "OmniSharp Fix Usings" })
+    map({ "n", "i" }, "<C-\\>", "<cmd>OmniSharpSignatureHelp<cr>", { desc = "OmniSharp Signature Help" })
+    map("n", "<leader>os=", "<cmd>OmniSharpCodeFormat<cr>", { desc = "OmniSharp Code Format" })
+    map("n", "<leader>ossu", "<cmd>OmniSharpStatus<cr>", { desc = "OmniSharp Status" })
+    map("n", "<leader>osrn", "<cmd>OmniSharpRename<cr>", { desc = "OmniSharp Rename" })
+  end,
+})
