@@ -116,6 +116,10 @@ return {
     "github/copilot.vim",
   },
   {
+    "L3MON4D3/LuaSnip",
+    enabled = false,
+  },
+  {
     "tpope/vim-fugitive",
   },
 }
