@@ -10,6 +10,11 @@ local function map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 
+-- Window split Keymaps
+map("n", "<leader>wh", "<C-W>s", { desc = "Split window horizontally" })
+map("n", "<leader>wv", "<C-W>v", { desc = "Split window vertically" })
+
+-- OmniSharp keymaps in cs files
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "cs",
   group = vim.api.nvim_create_augroup("cs_only_keymap", { clear = true }),
