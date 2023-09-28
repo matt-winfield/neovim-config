@@ -14,6 +14,28 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "cs",
   group = vim.api.nvim_create_augroup("cs_only_keymap", { clear = true }),
   callback = function()
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>o"] = {
+        name = "+OmniSharp",
+        s = {
+          name = "+OmniSharp",
+          f = {
+            name = "+Find/Fix",
+          },
+          p = {
+            name = "+Preview",
+          },
+          s = {
+            name = "+Status",
+          },
+          r = {
+            name = "+Rename",
+          },
+        },
+      },
+    })
+
     map("n", "<leader>osgd", "<cmd>OmniSharpGotoDefinition<cr>", { desc = "OmniSharp Go To Definition" })
     map("n", "<leader>osfu", "<cmd>OmniSharpFindUsages<cr>", { desc = "OmniSharp Find Usages" })
     map({ "n", "x" }, "<leader>osca", "<cmd>OmniSharpGetCodeActions<cr>", { desc = "OmniSharp Code Actions" })
