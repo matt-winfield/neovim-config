@@ -103,10 +103,6 @@ return {
     end,
   },
   {
-    "xiyaowong/transparent.nvim",
-    lazy = false,
-  },
-  {
     "github/copilot.vim",
   },
   {
