@@ -20,18 +20,21 @@ map("n", "<leader>i2", function()
   vim.bo.shiftwidth = 2
   vim.bo.tabstop = 2
   vim.o.softtabstop = 2
+  vim.notify("Indentation set to 2 spaces", "info", { title = "Indentation Changed" })
 end, { desc = "Set indentation to 2 spaces" })
 map("n", "<leader>i4", function()
   vim.bo.expandtab = true
   vim.bo.shiftwidth = 4
   vim.bo.tabstop = 4
   vim.o.softtabstop = 4
+  vim.notify("Indentation set to 4 spaces", "info", { title = "Indentation Changed" })
 end, { desc = "Set indentation to 4 spaces" })
 map("n", "<leader>it", function()
   vim.bo.expandtab = false
   vim.bo.shiftwidth = 4
   vim.bo.tabstop = 4
   vim.o.softtabstop = 4
+  vim.notify("Indentation set to tabs", "info", { title = "Indentation Changed" })
 end, { desc = "Set indentation to tabs" })
 
 -- OmniSharp keymaps in cs files
