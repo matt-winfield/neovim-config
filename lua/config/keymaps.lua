@@ -14,6 +14,26 @@ end
 map("n", "<leader>wh", "<C-W>s", { desc = "Split window horizontally" })
 map("n", "<leader>wv", "<C-W>v", { desc = "Split window vertically" })
 
+-- Map keybinds to change indentation settings
+map("n", "<leader>i2", function()
+  vim.bo.expandtab = true
+  vim.bo.shiftwidth = 2
+  vim.bo.tabstop = 2
+  vim.o.softtabstop = 2
+end, { desc = "Set indentation to 2 spaces" })
+map("n", "<leader>i4", function()
+  vim.bo.expandtab = true
+  vim.bo.shiftwidth = 4
+  vim.bo.tabstop = 4
+  vim.o.softtabstop = 4
+end, { desc = "Set indentation to 4 spaces" })
+map("n", "<leader>it", function()
+  vim.bo.expandtab = false
+  vim.bo.shiftwidth = 4
+  vim.bo.tabstop = 4
+  vim.o.softtabstop = 4
+end, { desc = "Set indentation to tabs" })
+
 -- OmniSharp keymaps in cs files
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "cs",
