@@ -1,5 +1,4 @@
 local Util = require("lazyvim.util")
-
 return {
   {
     "nvim-telescope/telescope.nvim",
@@ -13,7 +12,17 @@ return {
           path_display = { "truncate" },
         },
         extensions = {
-          undo = {},
+          undo = {
+            mappings = {
+              i = {
+                ["<cr>"] = require("telescope-undo.actions").restore,
+                ["<C-y>"] = require("telescope-undo.actions").yank_additions,
+                ["<C-Y>"] = require("telescope-undo.actions").yank_deletions,
+              },
+              -- Test
+              -- Another test
+            },
+          },
         },
       })
 
