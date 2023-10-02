@@ -6,6 +6,7 @@ return {
         ["<leader>i"] = { name = "+indentation" },
         ["<leader>d"] = { name = "+debug" },
         ["<leader>da"] = { name = "+adapters" },
+        ["<leader>t"] = { name = "+test" },
       },
     },
   },
