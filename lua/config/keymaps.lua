@@ -10,6 +10,10 @@ local function map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 
+-- Git
+map("n", "<leader>gl", "<cmd>Telescope git_bcommits<cr>", { desc = "Git Buffer History" })
+map("v", "<leader>gl", "<cmd>Telescope git_bcommits_range<cr>", { desc = "Git History (Selection)" })
+
 -- Window split Keymaps
 map("n", "<leader>wh", "<C-W>s", { desc = "Split window horizontally" })
 map("n", "<leader>wv", "<C-W>v", { desc = "Split window vertically" })
