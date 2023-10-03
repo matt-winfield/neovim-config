@@ -5,9 +5,9 @@ return {
       { "<leader>/", vim.NIL },
     },
   },
-  {
-    "OmniSharp/omnisharp-vim",
-  },
+  -- {
+  --   "OmniSharp/omnisharp-vim",
+  -- },
   {
     "telescope.nvim",
     dependencies = {
