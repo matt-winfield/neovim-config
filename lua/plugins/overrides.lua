@@ -20,6 +20,7 @@ return {
   },
   {
     "ahmedkhalf/project.nvim",
+    enabled = false,
     opts = {},
     event = "VeryLazy",
     config = function(_, opts)
