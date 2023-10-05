@@ -27,7 +27,7 @@ return {
           init_selection = "<cr>",
           node_incremental = "<cr>",
           scope_incremental = "<tab>",
-          node_decremental = "<s-tab>",
+          node_decremental = "<bs>",
         },
       },
     },
