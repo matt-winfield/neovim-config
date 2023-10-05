@@ -1,16 +1,19 @@
-local wk = require("which-key")
-
-wk.register({
-  ["<leader>h"] = {
-    name = "+harpoon",
-  },
-})
-
 return {
   "ThePrimeagen/harpoon",
+  event = "BufEnter",
+  dependencies = { "nvim-lua/plenary.nvim" },
   opts = {
     save_on_toggle = true,
   },
+  config = function()
+    local wk = require("which-key")
+
+    wk.register({
+      ["<leader>h"] = {
+        name = "+harpoon",
+      },
+    })
+  end,
   keys = {
     { "<leader>ha", "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "Add file" },
     { "<leader>hr", "<cmd>lua require('harpoon.mark').rm_file()<cr>", desc = "Remove file" },
