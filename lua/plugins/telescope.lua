@@ -7,9 +7,18 @@ return {
       "debugloop/telescope-undo.nvim",
     },
     config = function()
+      local telescope = require("telescope")
+      local actions = require("telescope.actions")
+
       require("telescope").setup({
         defaults = {
           path_display = { "truncate" },
+          mappings = {
+            i = {
+              ["<C-s>"] = actions.cycle_previewers_next,
+              ["<C-a>"] = actions.cycle_previewers_prev,
+            },
+          },
         },
         extensions = {
           undo = {
@@ -19,8 +28,6 @@ return {
                 ["<C-y>"] = require("telescope-undo.actions").yank_additions,
                 ["<C-Y>"] = require("telescope-undo.actions").yank_deletions,
               },
-              -- Test
-              -- Another test
             },
           },
         },
