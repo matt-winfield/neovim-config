@@ -2,6 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local wk = require("which-key")
+
 local function map(mode, lhs, rhs, opts)
   local options = { noremap = true, silent = true }
   if opts then
@@ -17,6 +19,16 @@ map("v", "<leader>gl", "<cmd>Telescope git_bcommits_range<cr>", { desc = "Git Hi
 -- Window split Keymaps
 map("n", "<leader>wh", "<C-W>s", { desc = "Split window horizontally" })
 map("n", "<leader>wv", "<C-W>v", { desc = "Split window vertically" })
+
+-- Yank file path/name to clipboard
+map("n", "<leader>yp", "<cmd>let @+=expand('%:p')<cr>", { desc = "Yank buffer path to clipboard" })
+map("n", "<leader>yr", "<cmd>let @+=expand('%')<cr>", { desc = "Yank buffer relative path to clipboard" })
+map("n", "<leader>yn", "<cmd>let @+=expand('%:t')<cr>", { desc = "Yank buffer name to clipboard" })
+wk.register({
+  ["<leader>y"] = {
+    name = "+yank",
+  },
+})
 
 -- Map keybinds to change indentation settings
 map("n", "<leader>i2", function()
