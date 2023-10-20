@@ -37,7 +37,7 @@ return {
       vim.keymap.set("n", "<leader>uu", "<cmd>Telescope undo<cr>")
     end,
     keys = {
-      { "<leader><space>", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+      { "<leader><space>", Util.telescope("files", { cwd = false, hidden = true }), desc = "Find Files (cwd)" },
     },
   },
 }
