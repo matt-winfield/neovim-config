@@ -25,6 +25,11 @@ return {
       local format_kinds = opts.formatting.format
       opts.formatting.format = function(entry, item)
         format_kinds(entry, item) -- add icons
+
+        -- Include type information
+        item.menu = entry:get_completion_item().detail
+
+        -- Include tailwind color preview
         return require("tailwindcss-colorizer-cmp").formatter(entry, item)
       end
     end,
