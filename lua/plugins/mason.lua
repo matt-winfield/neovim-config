@@ -5,7 +5,6 @@ return {
       ensure_installed = {
         "prettierd",
         "tsserver",
-        "eslint",
         "prettierd",
         "graphql",
       },
