@@ -8,9 +8,10 @@ Adds basic plugins and shortcuts the way I like them.
 
 (instructions for Windows since that's the OS I usually use)
 
-First install the dependencies:
- - `choco install neovim mingw lazygit ripgrep`
+First install the dependencies in an admin terminal (`mingw` and `zig` are used to compile plugins, like treesitter parsers):
+
+- `choco install neovim mingw zig lazygit ripgrep`
 
 Then install this configuration into the nvim configuration folder
- - `git clone https://github.com/matt-winfield/neovim-config $env:LOCALAPPDATA\nvim`
 
+- `git clone https://github.com/matt-winfield/neovim-config $env:LOCALAPPDATA\nvim`

@@ -31,5 +31,9 @@ return {
         },
       },
     },
+    config = function()
+      -- Ensure zig is installed, `choco install zig`
+      require("nvim-treesitter.install").compilers = { "zig" }
+    end,
   },
 }
