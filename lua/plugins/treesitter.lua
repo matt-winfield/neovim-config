@@ -31,9 +31,11 @@ return {
         },
       },
     },
-    config = function()
-      -- Ensure zig is installed, `choco install zig`
-      require("nvim-treesitter.install").compilers = { "zig" }
-    end,
+    -- Some treesitter plugins don't compile well with the default compiler,
+    -- try using zig then `:TSInstall <lang>`
+    -- config = function()
+    --   -- Ensure zig is installed, `choco install zig`
+    --   require("nvim-treesitter.install").compilers = { "zig" }
+    -- end,
   },
 }
