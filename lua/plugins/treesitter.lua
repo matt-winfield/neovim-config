@@ -30,17 +30,6 @@ return {
           node_decremental = "<bs>",
         },
       },
-      textobjects = {
-        swap = {
-          enable = true,
-          swap_next = {
-            ["<leader>a"] = "@parameter.inner",
-          },
-          swap_previous = {
-            ["<leader>A"] = "@parameter.inner",
-          },
-        },
-      },
     },
     -- Some treesitter plugins don't compile well with the default compiler,
     -- try using zig then `:TSInstall <lang>`
