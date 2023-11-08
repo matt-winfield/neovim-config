@@ -38,6 +38,11 @@ return {
     end,
     keys = {
       { "<leader><space>", Util.telescope("files", { cwd = false, hidden = true }), desc = "Find Files (cwd)" },
+      {
+        "<leader>sg",
+        Util.telescope("live_grep", { additional_args = { "--hidden" } }),
+        desc = "Live Grep",
+      },
     },
   },
 }
