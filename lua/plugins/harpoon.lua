@@ -21,9 +21,13 @@ return {
     { "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", desc = "Next file" },
     { "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "Previous file" },
     { "<leader>h1", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", desc = "File 1" },
+    { "<C-h>", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", desc = "File 1" },
     { "<leader>h2", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", desc = "File 2" },
+    { "<C-j>", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", desc = "File 2" },
     { "<leader>h3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", desc = "File 3" },
+    { "<C-k>", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", desc = "File 3" },
     { "<leader>h4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", desc = "File 4" },
+    { "<C-l>", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", desc = "File 4" },
     { "<leader>h5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", desc = "File 5" },
   },
 }
