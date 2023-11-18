@@ -100,8 +100,4 @@ return {
       { "<s-tab>", false, mode = { "i", "s" } },
     },
   },
-  {
-    "tpope/vim-fugitive",
-    event = "VeryLazy",
-  },
 }
