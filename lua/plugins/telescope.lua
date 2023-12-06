@@ -40,7 +40,10 @@ return {
       { "<leader><space>", Util.telescope("files", { cwd = false, hidden = true }), desc = "Find Files (cwd)" },
       {
         "<leader>sg",
-        Util.telescope("live_grep", { additional_args = { "--hidden", "-g", "!.git/*", "-g", "!.yarn/*" } }),
+        Util.telescope(
+          "live_grep",
+          { cwd = false, additional_args = { "--hidden", "-g", "!.git/*", "-g", "!.yarn/*" } }
+        ),
         desc = "Live Grep",
       },
     },
