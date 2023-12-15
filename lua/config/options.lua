@@ -8,3 +8,5 @@ vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 vim.o.conceallevel = 0 -- Disable hiding quotes etc. (especially annoying for JSON files)
+
+vim.opt.title = true -- Set the title of window to the value of the titlestring
