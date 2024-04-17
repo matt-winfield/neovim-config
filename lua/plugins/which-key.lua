@@ -5,6 +5,7 @@ return {
       defaults = {
         ["<leader>i"] = { name = "+indentation" },
         ["<leader>t"] = { name = "+tabs" },
+        ["<leader>z"] = { name = "+folds" },
       },
     },
   },
