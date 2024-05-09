@@ -34,7 +34,6 @@ return {
       })
 
       require("telescope").load_extension("undo")
-      vim.keymap.set("n", "<leader>uu", "<cmd>Telescope undo<cr>")
     end,
     keys = {
       { "<leader><space>", Util.telescope("files", { cwd = false, hidden = true }), desc = "Find Files (cwd)" },
