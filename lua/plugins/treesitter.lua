@@ -31,6 +31,17 @@ return {
         },
       },
     },
+    config = function()
+      vim.filetype.add({
+        extension = {
+          mdx = "mdx",
+        },
+      })
+
+      vim.treesitter.language.register("mdx", "markdown")
+      local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
+      ft_to_parser.mdx = "markdown"
+    end,
     -- Some treesitter plugins don't compile well with the default compiler,
     -- try using zig then `:TSInstall <lang>`
     -- config = function()
