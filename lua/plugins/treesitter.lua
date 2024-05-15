@@ -38,7 +38,7 @@ return {
         },
       })
 
-      vim.treesitter.language.register("mdx", "markdown")
+      vim.treesitter.language.register("markdown", "mdx")
     end,
     -- Some treesitter plugins don't compile well with the default compiler,
     -- try using zig then `:TSInstall <lang>`
