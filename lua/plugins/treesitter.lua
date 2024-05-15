@@ -1,8 +1,19 @@
+vim.filetype.add({
+  extension = {
+    mdx = "mdx",
+  },
+})
+
+vim.treesitter.language.register("markdown", "mdx")
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     opts = {
+      highlight = {
+        enable = true,
+      },
       ensure_installed = {
         "html",
         "javascript",
@@ -31,15 +42,6 @@ return {
         },
       },
     },
-    config = function()
-      vim.filetype.add({
-        extension = {
-          mdx = "mdx",
-        },
-      })
-
-      vim.treesitter.language.register("markdown", "mdx")
-    end,
     -- Some treesitter plugins don't compile well with the default compiler,
     -- try using zig then `:TSInstall <lang>`
     -- config = function()
