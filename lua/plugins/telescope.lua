@@ -38,6 +38,22 @@ return {
     keys = {
       { "<leader><space>", Util.telescope("files", { cwd = false, hidden = true }), desc = "Find Files (cwd)" },
       {
+        "<leader>ff",
+        function()
+          require("telescope.builtin").find_files({
+            find_command = {
+              "rg",
+              "--files",
+              "--hidden",
+              "--no-ignore",
+              "--glob",
+              "!**/node_modules/**",
+            },
+          })
+        end,
+        desc = "Find Files (excluding node_modules, including ignored files)",
+      },
+      {
         "<leader>sg",
         Util.telescope(
           "live_grep",
