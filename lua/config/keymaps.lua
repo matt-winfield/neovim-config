@@ -33,6 +33,13 @@ wk.register({
 -- Yank line excluding leading/trailing whitespace
 map("n", "<leader>yl", "^yg_", { desc = "Yank line contents to clipboard" })
 
+-- Notification group
+wk.register({
+  ["<leader>n"] = {
+    name = "+notifications",
+  },
+})
+
 -- Map keybinds to change indentation settings
 map("n", "<leader>i2", function()
   vim.bo.expandtab = true
