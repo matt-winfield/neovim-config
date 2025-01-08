@@ -27,5 +27,12 @@ return {
       end,
       desc = "Show notification history",
     },
+    {
+      "<leader>nd",
+      function()
+        Snacks.notifier.hide()
+      end,
+      desc = "Dismiss all notifications",
+    },
   },
 }
