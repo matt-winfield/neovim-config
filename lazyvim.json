@@ -1,7 +1,9 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.yanky",
-    "lazyvim.plugins.extras.lang.yaml"
+    "lazyvim.plugins.extras.lang.terraform",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.linting.eslint"
   ],
   "news": {
     "NEWS.md": "3415"
