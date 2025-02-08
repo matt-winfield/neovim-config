@@ -10,7 +10,7 @@ Adds basic plugins and shortcuts the way I like them.
 
 First install the dependencies in an admin terminal (`mingw` and `zig` are used to compile plugins, like treesitter parsers):
 
-- `choco install neovim --version neovim 0.10.0.20230531-beta`
+- `choco install neovim --version neovim 0.10.4`
 - `choco install mingw zig lazygit ripgrep`
 
 Then install this configuration into the nvim configuration folder
