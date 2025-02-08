@@ -8,13 +8,12 @@ return {
   config = function()
     local wk = require("which-key")
 
-    wk.register({
-      ["<leader>h"] = {
-        name = "+harpoon",
-      },
+    wk.add({
+      { "<leader>h", group = "harpoon" },
     })
   end,
   keys = {
+    { "<leader>h", group = "harpoon" },
     { "<leader>ha", "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "Add file" },
     { "<leader>hr", "<cmd>lua require('harpoon.mark').rm_file()<cr>", desc = "Remove file" },
     { "<leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Harpoon menu" },
