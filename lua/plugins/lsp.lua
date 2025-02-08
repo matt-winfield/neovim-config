@@ -8,6 +8,7 @@ return {
           root_dir = require("lspconfig.util").root_pattern(
             "eslint.config.mjs",
             ".eslintrc.js",
+            ".eslintrc.cjs",
             ".eslintrc.json",
             ".eslintrc",
             ".git"
