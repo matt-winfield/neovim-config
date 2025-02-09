@@ -9,7 +9,7 @@ return {
       auto_trigger = true,
       hide_during_completion = false,
       keymap = {
-        accept = "<Tab>",
+        accept = false, -- handled by nvim-cmp / blink.cmp
         next = "<M-]>",
         prev = "<M-[>",
       },
