@@ -7,7 +7,7 @@ return {
         ["<C-x>"] = cmp.mapping.complete(),
       })
 
-      vim.api.nvim_set_hl(0, "CmpItemKindVariable", { fg = "#b86afc" })
+      vim.api.nvim_set_hl(0, "CmpItemKindVariable", { fg = "#ca92fc" })
       vim.api.nvim_set_hl(0, "CmpItemKindInterface", { link = "CmpItemKindVariable" })
     end,
   },
