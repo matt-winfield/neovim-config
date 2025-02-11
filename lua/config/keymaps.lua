@@ -36,6 +36,11 @@ wk.add({
   { "<leader>n", group = "notifications" },
 })
 
+-- Color Picker group
+wk.add({
+  { "<leader>p", group = "Color Picker" },
+})
+
 -- Map keybinds to change indentation settings
 map("n", "<leader>i2", function()
   vim.bo.expandtab = true
