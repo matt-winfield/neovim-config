@@ -1,11 +1,22 @@
 return {
   "saghen/blink.cmp",
   opts = function(_, opts)
+    opts.completion.list = {
+      selection = {
+        preselect = false,
+        auto_insert = false,
+      },
+    }
     opts.completion.menu.draw.columns = {
       { "label", "label_description", gap = 1 },
       { "kind_icon", "kind" },
     }
+    opts.completion.documentation = {
+      auto_show = true,
+      auto_show_delay_ms = 100,
+    }
     opts.keymap = {
+      preset = "enter",
       ["<C-x>"] = {
         function(cmp)
           cmp.show()
