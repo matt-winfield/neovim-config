@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd("User", {
     if vim.g.vscode then
       vim.keymap.del("n", "u")
       vim.keymap.del("n", "<C-r>")
+      vim.opt.spell = false
     end
   end,
 })
